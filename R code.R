@@ -3,7 +3,7 @@
 
 best <- function(state, outcome) {
   ## Read outcome data
-  data <- read.csv("C:/Users/snamin/Documents/GitHub/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
+  data <- read.csv("dataDir/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
   fd   <- as.data.frame(cbind(data[, 2],   # hospital
                               data[, 7],   # state
                               data[, 11],  # heart attack
@@ -32,7 +32,7 @@ best("SC", "heart attack") ## [1] "MUSC MEDICAL CENTER"
 #****************************************************************************************************************************
 rankhospital <- function(state, outcome, rank = "best"){
   ## Read outcome data
-  data <- read.csv("C:/Users/snamin/Documents/GitHub/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
+  data <- read.csv("dataDir/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
   fd   <- as.data.frame(cbind(data[, 2],  # hospital
                               data[, 7],  # state
                               data[, 11],  # heart attack
@@ -73,7 +73,7 @@ rankhospital("NC", "heart attack", "worst") ##[1] "WAYNE MEMORIAL HOSPITAL"
 #*****************************************************************************************************************************
 rankall <- function(outcome, num = "best"){
   ## Read outcome data
-  data <- read.csv("C:/Users/snamin/Documents/GitHub/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
+  data <- read.csv("dataDir/R-Programming-Assignment-3/Data/outcome-of-care-measures.csv", colClasses = "character")
   fd   <- as.data.frame(cbind(data[, 2],  # hospital
                               data[, 7],  # state
                               data[, 11],  # heart attack
